@@ -1,0 +1,40 @@
+kafka:
+  brokers:
+    - 'redpanda-0:9092'
+    - 'redpanda-1:9092'
+    - 'redpanda-2:9092'
+  sasl:
+    enabled: true
+    impersonateUser: true
+schemaRegistry:
+  enabled: true
+  urls:
+    - 'http://redpanda-0:8081'
+    - 'http://redpanda-1:8081'
+    - 'http://redpanda-2:8081'
+  authentication:
+    impersonateUser: true
+redpanda:
+  adminApi:
+    enabled: true
+    urls:
+      - 'http://redpanda-0:9644'
+      - 'http://redpanda-1:9644'
+      - 'http://redpanda-2:9644'
+    authentication:
+      impersonateUser: true
+authentication:
+  jwtSigningKey: VPIZk635JwGHC2Uu0kAnaGy7Vna1QryrProZKpkwG40=
+  useSecureCookies: false
+  basic:
+    enabled: true
+  oidc:
+    enabled: true
+    issuerUrl: 'http://keycloak:8081/realms/redpanda'
+    clientId: redpanda
+    clientSecret: <your client secret>
+    redirectUrl: 'http://redpanda-console:8080/auth/callbacks/oidc'
+    prompt: consent
+    accessType: offline
+    principalMapping: $.email
+license: '<your license key string>'
