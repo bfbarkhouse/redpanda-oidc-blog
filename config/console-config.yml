@@ -34,7 +34,4 @@ authentication:
     clientId: redpanda
     clientSecret: <your client secret>
     redirectUrl: 'http://redpanda-console:8080/auth/callbacks/oidc'
-    prompt: consent
-    accessType: offline
-    principalMapping: $.email
 license: '<your license key string>'
