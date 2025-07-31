@@ -34,4 +34,3 @@ authentication:
     clientId: redpanda
     clientSecret: <your client secret>
     redirectUrl: 'http://redpanda-console:8080/auth/callbacks/oidc'
-license: '<your license key string>'
