@@ -30,7 +30,7 @@ authentication:
     enabled: true
   oidc:
     enabled: true
-    issuerUrl: 'http://keycloak:8081/realms/redpanda'
+    issuerUrl: 'http://keycloak:8088/realms/redpanda'
     clientId: redpanda
     clientSecret: <your client secret>
     redirectUrl: 'http://redpanda-console:8080/auth/callbacks/oidc'
