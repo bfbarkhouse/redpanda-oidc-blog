@@ -54,4 +54,4 @@ consumer_group_lag_collection_interval_sec: 60
 # Enable Redpanda to collect host metrics.
 # https://docs.redpanda.com/current/reference/properties/cluster-properties/#enable_host_metrics
 enable_host_metrics: true
-#schema_registry_enable_authorization: true
+schema_registry_enable_authorization: true
