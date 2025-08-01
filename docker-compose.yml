@@ -174,11 +174,11 @@ services:
     networks:
       - redpanda_network
     image: keycloak/keycloak:26.3
-    command: start --http-port=8081 --http-enabled=true
+    command: start --http-port=8088 --http-enabled=true
     environment:
       KC_BOOTSTRAP_ADMIN_USERNAME: admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
-      KC_HOSTNAME: http://keycloak:8081
+      KC_HOSTNAME: http://keycloak:8088
       KC_HTTP_ENABLED: true
      #KC_LOG_LEVEL: debug
       KC_DB: postgres
@@ -186,7 +186,7 @@ services:
       KC_DB_USERNAME: keycloak_db_user
       KC_DB_PASSWORD: keycloak_db_user_password
     ports:
-      - "8081:8081"
+      - "8088:8088"
     restart: unless-stopped
     depends_on: 
       - postgres
