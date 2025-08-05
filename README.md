@@ -2,6 +2,8 @@
 
 A demonstration showcasing how to integrate **Redpanda** with **OpenID Connect (OIDC)** for authentication and authorization, including example scripts and a `docker-compose.yml` setup.
 
+Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka API or REST/Admin API calls through SASL/OAUTHBEARER or HTTP Bearer authentication. You configure an identity provider, provide the introspection URL or JWKS URI, and Redpanda will verify the token’s audience and subject claims to establish principals (such as `user:OIDC:sub@example.com`) for ACL enforcement.
+
 ## 🚀 Features
 
 - Preconfigured Docker Compose environment to spin up Redpanda with OIDC support.
@@ -10,7 +12,7 @@ A demonstration showcasing how to integrate **Redpanda** with **OpenID Connect (
 - Sample configuration files under `config/` for Redpanda Console and Redpanda nodes.
 
 ## 📁 Repository Structure
-
+.
 ├── config/ # Redpanda Console and Redpanda node config examples
 ├── bootstrap.yml # Redpanda cluster bootstrap configuration
 ├── rpk-profile.yaml # rpk CLI profile for interacting with the cluster
@@ -33,8 +35,5 @@ A demonstration showcasing how to integrate **Redpanda** with **OpenID Connect (
     cd redpanda-oidc-blog
     ```
 
-2. Review the Redpanda blog post for a full tutorial
+2. Review the Redpanda [blog post](https://www.redpanda.com/blog) for a full tutorial
 
-## 🎯 How this Works
-
-Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka API or REST/Admin API calls through SASL/OAUTHBEARER or HTTP Bearer authentication :contentReference[oaicite:1]{index=1}. You configure an identity provider, provide the introspection URL or JWKS URI, and Redpanda will verify the token’s audience and subject claims to establish principals (such as `user:OIDC:sub@example.com`) for ACL enforcement :contentReference[oaicite:2]{index=2}.
