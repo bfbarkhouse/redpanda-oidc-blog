@@ -20,7 +20,7 @@ Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka
 ├── docker-compose.yml # Docker Compose stack to launch the demo
 ├── test-api-oidc.sh # Script to test OIDC authentication against Redpanda APIs
 └── README.md # Overview and instructions (this file)
-
+```
 
 ## 🛠️ Prerequisites
 
