@@ -2,7 +2,7 @@
 
 A demonstration showcasing how to integrate **Redpanda** with **OpenID Connect (OIDC)** for authentication and authorization. The preconfigured Docker Compose environment spins up Keycloak, Redpanda Console and a Redpanda Cluster with OIDC authentication.
 
-Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka API or REST/Admin API calls through SASL/OAUTHBEARER or HTTP Bearer authentication. You configure an identity provider, provide the introspection URL or JWKS URI, and Redpanda will verify the token’s audience and subject claims to establish principals (such as `user:OIDC:sub@example.com`) for ACL enforcement.
+Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka API or HTTP API calls through SASL/OAUTHBEARER or HTTP Bearer authentication respectively. You configure an identity provider, provide the introspection URL or JWKS URI, and Redpanda will verify the token’s audience and subject claims to establish principals (such as `user:OIDC:sub@example.com`) for ACL enforcement.
 
 ## 📁 Repository Structure
 ```
