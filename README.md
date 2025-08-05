@@ -12,6 +12,7 @@ Redpanda supports OIDC authentication by validating JWT tokens on incoming Kafka
 - Sample configuration files under `config/` for Redpanda Console and Redpanda nodes.
 
 ## 📁 Repository Structure
+```
 .
 ├── config/ # Redpanda Console and Redpanda node config examples
 ├── bootstrap.yml # Redpanda cluster bootstrap configuration
